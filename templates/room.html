@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Room: {{ room_id }}</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Room: {{ room_id }}</h2>
+        <div class="chat-box">
+            {% for msg in messages %}
+                <div class="msg">{{ msg }}</div>
+            {% endfor %}
+        </div>
+        <form method="POST">
+            <input type="text" name="message" placeholder="Type your message..." required>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+</body>
+</html>
